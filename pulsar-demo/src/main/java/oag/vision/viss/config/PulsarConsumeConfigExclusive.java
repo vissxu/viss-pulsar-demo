@@ -77,14 +77,14 @@ public class PulsarConsumeConfigExclusive {
 
     @Bean
     Consumer pulsarExclusiveConsumerC() throws PulsarClientException {
-        Consumer<RequestBody> consumer = pulsarClient.newConsumer(Schema.JSON(RequestBody.class))
+        Consumer<String> consumer = pulsarClient.newConsumer(Schema.STRING)
                 .topic(commonConfig.getTestTopic())
                 .consumerName("consumerExclusiveC")
                 .subscriptionName("subscription-Exclusive")
                 .subscriptionType(SubscriptionType.Exclusive)
-                .messageListener(new MessageListener<RequestBody>() {
+                .messageListener(new MessageListener<String>() {
                     @Override
-                    public void received(Consumer<RequestBody> consumer, Message<RequestBody> msg) {
+                    public void received(Consumer<String> consumer, Message<String> msg) {
                         try {
                             logger.info("received msg, topic: {}, value: {} ", msg.getTopicName(), JSONUtil.convertToString(msg.getValue()));
                             consumer.acknowledge(msg);

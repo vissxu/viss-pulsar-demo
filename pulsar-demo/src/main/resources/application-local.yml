@@ -1,11 +1,13 @@
 pulsar:
   topic:
-    test-topic: persistent://xuwei/ns-xuwei/test-topic
-    test-topicA: persistent://vision/ns-vision/test-topicA
-    test-topicB: persistent://vision/ns-vision/test-topicB
-    test-topicC: persistent://vision/ns-vision/test-topicB
+    test-topic: persistent://public/default/test-topic
+    test-topicA: persistent://public/default/test-topicA
+    test-topicB: persistent://public/default/test-topicB
+    test-topicC: persistent://public/default/test-topicB
   client:
-#    service-pulsar-url: pulsar://127.0.0.1:6650
-#    service-http-url: http://127.0.0.1:8080
-    service-pulsar-url: pulsar://127.0.0.1:16650,127.0.0.1:26650,127.0.0.1:36650
-    service-http-url: http://127.0.0.1:18080,127.0.0.1:28080,127.0.0.1:38080
+    service-pulsar-url: pulsar://127.0.0.1:6650
+    service-http-url: http://127.0.0.1:8080
+#    service-pulsar-url: pulsar://127.0.0.1:16650,127.0.0.1:26650,127.0.0.1:36650
+#    service-http-url: http://127.0.0.1:18080,127.0.0.1:28080,127.0.0.1:38080
+
+
