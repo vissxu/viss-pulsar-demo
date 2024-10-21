@@ -1,0 +1,6 @@
+pulsar:
+  topic:
+    test-topic: persistent://xuwei/ns-xuwei/topic-xuwei
+  client:
+    service-pulsar-url: pulsar://brok0.as.com:6650,brok1.as.com:6650,brok2.as.com:6650
+    service-http-url: http://brok0.as.com:8080,brok1.as.com:8080,brok2.as.com:8080
